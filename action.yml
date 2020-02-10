@@ -1,0 +1,8 @@
+name: 'gitCret'
+description: 'Prevents pushing sensitive keys/credentials. Audit your commits & pull-requests for sensitive credentials and generate alerts.'
+branding:
+  icon: 'shield'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
