@@ -8,7 +8,7 @@ API_VERSION=v3
 API_HEADER="Accept: application/vnd.github.${API_VERSION}+json; application/vnd.github.antiope-preview+json"
 AUTH_HEADER="Authorization: token ${GITHUB_TOKEN}"
 
-result=$(gitleaks -v --exclude-forks --redact --threads=1 --branch=$GITHUB_REF --repo-path=$GITHUB_WORKSPACE)
+result=$(gitleaks -v --exclude-forks --redact --threads=1 --repo-path=$GITHUB_WORKSPACE)
 
 if [ $? -eq 1 ]; then
     if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
